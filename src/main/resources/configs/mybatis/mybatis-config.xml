@@ -8,6 +8,6 @@
     </settings>
     
     <typeAliases>
-     	<!--<typeAlias type="com.yunat.channel.controller.base.BaseDataBean" alias="BaseDataBean" />-->
+     	<!--<typeAlias type="com.yunat.channel.controller.common.BaseDataBean" alias="BaseDataBean" />-->
     </typeAliases>
 </configuration>
