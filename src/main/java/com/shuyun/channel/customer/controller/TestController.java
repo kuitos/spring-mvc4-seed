@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @RequestMapping(value = "test", produces = ContentType.APPLICATION_JSON_UTF8)
+    @RequestMapping(value = "test", produces = ContentType.TEXT_PLAIN_UTF8)
     public String test() {
         return "好了";
     }
