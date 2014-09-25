@@ -12,10 +12,9 @@ public class User {
 
     private String userName;
 
-    private int age;
+    private Integer age;
 
     private User() {
-
     }
 
     private User(String userName, int age) {

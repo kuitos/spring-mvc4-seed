@@ -7,11 +7,10 @@ import com.shuyun.channel.common.enums.ResponseErrorEnum;
  * 统一请求返回结果model
  *
  * @author kui.liu
- * @warning 不提供直接设置errorCode的接口，只能通过方法设置错误信息
  * @since 2014/09/24 下午10:27
  */
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
-public class RequestResult<T> {
+public class ResponseResult<T> {
 
     private boolean success;
 
@@ -21,6 +20,13 @@ public class RequestResult<T> {
 
     /* 不提供直接设置errorCode的接口，只能通过setErrorInfo方法设置错误信息 */
     private String errorCode;
+
+    private ResponseResult() {
+    }
+
+    public static ResponseResult newInstance() {
+        return new ResponseResult();
+    }
 
     public boolean isSuccess() {
         return success;

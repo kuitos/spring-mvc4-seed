@@ -2,7 +2,7 @@ package com.shuyun.channel.customer.controller;
 
 import com.shuyun.channel.common.base.BaseController;
 import com.shuyun.channel.common.constant.ContentType;
-import com.shuyun.channel.common.model.RequestResult;
+import com.shuyun.channel.common.model.ResponseResult;
 import com.shuyun.channel.customer.model.User;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +18,8 @@ public class DemoController extends BaseController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DemoController.class);
 
-    @RequestMapping(value = "test", produces = ContentType.APPLICATION_JSON_UTF8)
-    public RequestResult<User> test(User user) {
-
-        this.genErrorResult("错误");
-
-        LOGGER.debug("tttt");
-
+    @RequestMapping(value = "test")
+    public ResponseResult<User> test(User user) {
         return this.genResult(user, "成功!");
     }
 
