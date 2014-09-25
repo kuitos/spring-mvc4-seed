@@ -1,6 +1,7 @@
 package com.shuyun.channel.common.enums;
 
-import org.codehaus.jackson.annotate.JsonValue;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -31,4 +32,11 @@ public enum ResponseErrorEnum {
 
     private String message;
 
+    public String getCode() {
+        return code;
+    }
+
+    public String getMessage() {
+        return message;
+    }
 }

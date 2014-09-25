@@ -28,6 +28,10 @@
         </property>
     </bean>
 
+    <bean id="mybatisDao" class="com.shuyun.channel.common.base.MybatisDao">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory" />
+    </bean>
+
     <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource" />
     </bean>
