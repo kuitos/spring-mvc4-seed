@@ -1,6 +1,5 @@
 package com.shuyun.channel.common.enums;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonValue;
 
 import java.util.HashMap;

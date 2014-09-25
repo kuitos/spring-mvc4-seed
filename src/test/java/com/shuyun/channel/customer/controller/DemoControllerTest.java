@@ -10,9 +10,5 @@ public class DemoControllerTest {
     @Test
     public void testTest() throws Exception {
 
-        DemoController demoController = new DemoController();
-        User user = User.newInstance("kuitos", 10);
-        demoController.test(user);
-
     }
 }

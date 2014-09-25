@@ -17,11 +17,26 @@ public class BaseController {
     private static final Logger LOGGER = LoggerFactory.getLogger(BaseController.class);
 
     /**
-     * 生成响应成功的结果
+     * 生成响应成功的(不带正文)的结果
+     *
+     * @param message 成功提示信息
+     * @return ResponseResult
+     */
+    protected <T> ResponseResult<T> genResult(String message) {
+
+        ResponseResult<T> responseResult = ResponseResult.newInstance();
+        responseResult.setSuccess(true);
+        responseResult.setMessage(message);
+
+        return responseResult;
+    }
+
+    /**
+     * 生成响应成功(带正文)的结果
      *
      * @param data    结果正文
      * @param message 成功提示信息
-     * @return
+     * @return ResponseResult
      */
     protected <T> ResponseResult<T> genResult(T data, String message) {
 
@@ -41,11 +56,11 @@ public class BaseController {
      * 生成响应失败的结果
      *
      * @param message 自定义错误信息
-     * @return
+     * @return ResponseResult
      */
-    protected ResponseResult genErrorResult(String message) {
+    protected <T> ResponseResult<T> genErrorResult(String message) {
 
-        ResponseResult result = ResponseResult.newInstance();
+        ResponseResult<T> result = ResponseResult.newInstance();
         result.setSuccess(false);
         result.setMessage(message);
 
@@ -57,14 +72,14 @@ public class BaseController {
     }
 
     /**
-     * 生成响应失败的结果
+     * 生成响应失败(带errorCode)的结果
      *
      * @param responseErrorEnum 失败信息
-     * @return
+     * @return ResponseResult
      */
-    protected ResponseResult genErrorResult(ResponseErrorEnum responseErrorEnum) {
+    protected <T> ResponseResult<T> genErrorResult(ResponseErrorEnum responseErrorEnum) {
 
-        ResponseResult result = ResponseResult.newInstance();
+        ResponseResult<T> result = ResponseResult.newInstance();
         result.setSuccess(false);
         result.setErrorInfo(responseErrorEnum);
 
@@ -73,7 +88,6 @@ public class BaseController {
         }
 
         return result;
-
     }
 
 }

@@ -42,7 +42,7 @@
         </tx:attributes>
     </tx:advice>
     <aop:config>
-        <aop:pointcut id="testPointcut" expression="execution(* com.shuyun.channel..*Service.*(..))" />
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="testPointcut" />
+        <aop:pointcut id="servicePointcut" expression="execution(* com.shuyun.channel..*Service.*(..))" />
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="servicePointcut" />
     </aop:config>
 </beans>

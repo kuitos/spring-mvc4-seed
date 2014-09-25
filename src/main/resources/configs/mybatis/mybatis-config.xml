@@ -8,6 +8,6 @@
     </settings>
     
     <typeAliases>
-     	<!--<typeAlias type="com.yunat.channel.controller.common.BaseDataBean" alias="BaseDataBean" />-->
+     	<typeAlias type="com.shuyun.channel.customer.model.User" alias="User" />
     </typeAliases>
 </configuration>

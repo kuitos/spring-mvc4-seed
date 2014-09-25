@@ -24,8 +24,8 @@ public class ResponseResult<T> {
     private ResponseResult() {
     }
 
-    public static ResponseResult newInstance() {
-        return new ResponseResult();
+    public static <T> ResponseResult<T> newInstance() {
+        return new ResponseResult<>();
     }
 
     public boolean isSuccess() {
