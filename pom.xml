@@ -4,10 +4,10 @@
 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.shuyun</groupId>
-    <artifactId>shuyun-customer</artifactId>
+    <artifactId>spring-mvc4-seed</artifactId>
     <packaging>war</packaging>
     <version>1.0.0</version>
-    <name>shuyun-customer</name>
+    <name>spring-mvc4-seed</name>
 
     <properties>
         <spring.version>4.1.0.RELEASE</spring.version>
@@ -171,7 +171,7 @@ http://maven.apache.org/maven-v4_0_0.xsd">
     </dependencies>
 
     <build>
-        <finalName>shuyun-customer</finalName>
+        <finalName>spring-mvc4-seed</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
