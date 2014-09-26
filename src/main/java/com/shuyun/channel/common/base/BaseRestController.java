@@ -22,6 +22,12 @@ public class BaseRestController {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BaseRestController.class);
 
+    /**
+     * 统一的rest接口异常处理器
+     *
+     * @param e 捕获的异常
+     * @return 异常信息
+     */
     @ExceptionHandler
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     protected <T> ResponseResult<T> exceptionHandler(Exception e) {
