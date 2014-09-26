@@ -55,7 +55,7 @@ public class RestResultGenerator {
      * 生成响应失败的结果
      *
      * @param message 自定义错误信息
-     * @return ResponseResult
+     * @return ResponseResult<T>
      */
     public static <T> ResponseResult<T> genErrorResult(String message) {
 
