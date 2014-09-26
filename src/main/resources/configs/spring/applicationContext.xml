@@ -22,7 +22,7 @@
         </property>
     </bean>
 
-    <bean id="mybatisDao" class="com.shuyun.channel.common.base.MybatisDao">
+    <bean id="mybatisDao" class="com.shuyun.channel.base.MybatisDao">
         <property name="sqlSessionFactory" ref="sqlSessionFactory" />
     </bean>
 

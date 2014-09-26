@@ -1,9 +1,7 @@
-package com.shuyun.channel.customer.model;
+package com.shuyun.channel.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.hibernate.validator.constraints.NotEmpty;
-
-import javax.validation.constraints.NotNull;
 
 /**
  * @author kui.liu

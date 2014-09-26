@@ -1,8 +1,8 @@
-package com.shuyun.channel.common.base;
+package com.shuyun.channel.base;
 
-import com.shuyun.channel.common.enums.ResponseErrorEnum;
-import com.shuyun.channel.common.model.ResponseResult;
-import com.shuyun.channel.common.util.RestResultGenerator;
+import com.shuyun.channel.enums.ResponseErrorEnum;
+import com.shuyun.channel.model.ResponseResult;
+import com.shuyun.channel.util.RestResultGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;

@@ -1,4 +1,4 @@
-package com.shuyun.channel.common.util;
+package com.shuyun.channel.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;

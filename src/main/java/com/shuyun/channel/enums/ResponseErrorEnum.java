@@ -1,4 +1,4 @@
-package com.shuyun.channel.common.enums;
+package com.shuyun.channel.enums;
 
 import com.fasterxml.jackson.annotation.JsonValue;
 

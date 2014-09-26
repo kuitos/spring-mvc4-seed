@@ -1,7 +1,7 @@
-package com.shuyun.channel.customer.service;
+package com.shuyun.channel.service;
 
-import com.shuyun.channel.common.base.MybatisDao;
-import com.shuyun.channel.customer.model.User;
+import com.shuyun.channel.base.MybatisDao;
+import com.shuyun.channel.model.User;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;

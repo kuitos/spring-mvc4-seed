@@ -8,6 +8,6 @@
     </settings>
     
     <typeAliases>
-     	<typeAlias type="com.shuyun.channel.customer.model.User" alias="User" />
+     	<typeAlias type="com.shuyun.channel.model.User" alias="User" />
     </typeAliases>
 </configuration>

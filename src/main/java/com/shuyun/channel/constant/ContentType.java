@@ -1,4 +1,4 @@
-package com.shuyun.channel.common.constant;
+package com.shuyun.channel.constant;
 
 /**
  * @author kui.liu

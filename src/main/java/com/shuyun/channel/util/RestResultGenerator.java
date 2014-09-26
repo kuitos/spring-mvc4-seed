@@ -1,7 +1,7 @@
-package com.shuyun.channel.common.util;
+package com.shuyun.channel.util;
 
-import com.shuyun.channel.common.enums.ResponseErrorEnum;
-import com.shuyun.channel.common.model.ResponseResult;
+import com.shuyun.channel.enums.ResponseErrorEnum;
+import com.shuyun.channel.model.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
