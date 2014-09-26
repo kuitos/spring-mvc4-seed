@@ -1,40 +1,19 @@
-package com.shuyun.channel.common.base;
+package com.shuyun.channel.common.util;
 
 import com.shuyun.channel.common.enums.ResponseErrorEnum;
 import com.shuyun.channel.common.model.ResponseResult;
-import com.shuyun.channel.common.util.JacksonMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
 
 /**
- * 所有restController基类，用于统一请求响应的结果，统一接口异常处理
+ * 统一的RestController结果生成器
  *
  * @author kui.liu
- * @since 2014/09/25 上午10:19
+ * @since 2014/09/26 下午7:31
  */
-@ControllerAdvice(annotations = RestController.class)
-public class BaseRestController {
+public class RestResultGenerator {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(BaseRestController.class);
-
-    /**
-     * 统一的rest接口异常处理器
-     *
-     * @param e 捕获的异常
-     * @return 异常信息
-     */
-    @ExceptionHandler
-    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    protected <T> ResponseResult<T> exceptionHandler(Exception e) {
-
-        LOGGER.error("接口调用异常!", e);
-        return this.genErrorResult(ResponseErrorEnum.INTERNAL_SERVER_ERROR);
-    }
+    private static final Logger LOGGER = LoggerFactory.getLogger(RestResultGenerator.class);
 
     /**
      * 生成响应成功的(不带正文)的结果
@@ -42,7 +21,7 @@ public class BaseRestController {
      * @param message 成功提示信息
      * @return ResponseResult
      */
-    protected <T> ResponseResult<T> genResult(String message) {
+    public static <T> ResponseResult<T> genResult(String message) {
 
         ResponseResult<T> responseResult = ResponseResult.newInstance();
         responseResult.setSuccess(true);
@@ -58,7 +37,7 @@ public class BaseRestController {
      * @param message 成功提示信息
      * @return ResponseResult
      */
-    protected <T> ResponseResult<T> genResult(T data, String message) {
+    public static <T> ResponseResult<T> genResult(T data, String message) {
 
         ResponseResult<T> result = ResponseResult.newInstance();
         result.setSuccess(true);
@@ -78,7 +57,7 @@ public class BaseRestController {
      * @param message 自定义错误信息
      * @return ResponseResult
      */
-    protected <T> ResponseResult<T> genErrorResult(String message) {
+    public static <T> ResponseResult<T> genErrorResult(String message) {
 
         ResponseResult<T> result = ResponseResult.newInstance();
         result.setSuccess(false);
@@ -97,7 +76,7 @@ public class BaseRestController {
      * @param responseErrorEnum 失败信息
      * @return ResponseResult
      */
-    protected <T> ResponseResult<T> genErrorResult(ResponseErrorEnum responseErrorEnum) {
+    public static <T> ResponseResult<T> genErrorResult(ResponseErrorEnum responseErrorEnum) {
 
         ResponseResult<T> result = ResponseResult.newInstance();
         result.setSuccess(false);
