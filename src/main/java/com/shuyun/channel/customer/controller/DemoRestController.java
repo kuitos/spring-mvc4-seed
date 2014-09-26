@@ -1,12 +1,9 @@
 package com.shuyun.channel.customer.controller;
 
-import com.shuyun.channel.common.exception.ParamsNotMatchException;
 import com.shuyun.channel.common.model.ResponseResult;
 import com.shuyun.channel.common.util.RestResultGenerator;
 import com.shuyun.channel.customer.model.User;
 import com.shuyun.channel.customer.service.DemoService;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -27,7 +24,7 @@ public class DemoRestController {
     private DemoService demoService;
 
     @RequestMapping(value = "getUser", method = RequestMethod.GET)
-    public ResponseResult<List<User>> getUser(String userName) throws ParamsNotMatchException {
+    public ResponseResult<List<User>> getUser(String userName){
 
         List<User> userList = demoService.getUser(userName);
         return RestResultGenerator.genResult(userList, "成功!");
