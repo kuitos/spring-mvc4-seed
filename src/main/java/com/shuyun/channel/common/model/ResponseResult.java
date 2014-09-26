@@ -3,6 +3,8 @@ package com.shuyun.channel.common.model;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.shuyun.channel.common.enums.ResponseErrorEnum;
 
+import javax.validation.constraints.NotNull;
+
 /**
  * 统一请求返回结果model
  *

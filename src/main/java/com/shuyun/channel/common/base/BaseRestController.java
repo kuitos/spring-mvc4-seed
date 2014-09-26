@@ -5,16 +5,30 @@ import com.shuyun.channel.common.model.ResponseResult;
 import com.shuyun.channel.common.util.JacksonMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.ResponseStatus;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * controller基类，用于统一请求响应的结果
+ * 所有restController基类，用于统一请求响应的结果，统一接口异常处理
  *
  * @author kui.liu
  * @since 2014/09/25 上午10:19
  */
-public class BaseController {
+@ControllerAdvice(annotations = RestController.class)
+public class BaseRestController {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(BaseController.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(BaseRestController.class);
+
+    @ExceptionHandler
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    protected <T> ResponseResult<T> exceptionHandler(Exception e) {
+
+        LOGGER.error("接口调用异常!", e);
+        return this.genErrorResult(ResponseErrorEnum.INTERNAL_SERVER_ERROR);
+    }
 
     /**
      * 生成响应成功的(不带正文)的结果

@@ -1,6 +1,9 @@
 package com.shuyun.channel.customer.model;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
+import org.hibernate.validator.constraints.NotEmpty;
+
+import javax.validation.constraints.NotNull;
 
 /**
  * @author kui.liu
@@ -10,8 +13,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 @JsonInclude(JsonInclude.Include.NON_EMPTY)
 public class User {
 
+    @NotEmpty
     private String userName;
 
+    @NotNull
     private Integer age;
 
     private User() {
