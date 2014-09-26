@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public enum ResponseErrorEnum {
 
-    PARAMS_NOT_MATCH("PARAMS_NOT_MATCH", "参数不匹配!"),
+    ILLEGAL_PARAMS("ILLEGAL_PARAMS", "请求参数不合法!"),
     INTERNAL_SERVER_ERROR("INTERNAL_SERVER_ERROR", "接口内部异常!");
 
     private ResponseErrorEnum(String code, String message) {

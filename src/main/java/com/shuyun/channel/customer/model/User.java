@@ -16,8 +16,8 @@ public class User {
     @NotEmpty
     private String userName;
 
-    @NotNull
-    private Integer age;
+    @NotEmpty
+    private int age;
 
     private User() {
     }

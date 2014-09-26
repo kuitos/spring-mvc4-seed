@@ -30,13 +30,11 @@ public class DemoRestController {
     public ResponseResult<List<User>> getUser(String userName) throws ParamsNotMatchException {
 
         List<User> userList = demoService.getUser(userName);
-
-        throw new ParamsNotMatchException();
-//        return ResponseResultGenerator.genResult(userList, "成功!");
+        return RestResultGenerator.genResult(userList, "成功!");
     }
 
     @RequestMapping(value = "saveUser", method = RequestMethod.POST)
-    public ResponseResult saveUser(@Valid @RequestBody User user, Errors errors, BindingResult bindingResult) {
+    public ResponseResult saveUser(@Valid @RequestBody User user) {
 
         demoService.saveUser(user);
         return RestResultGenerator.genResult("保存成功!");
