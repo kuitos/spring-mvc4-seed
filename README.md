@@ -1,8 +1,6 @@
 # Spring MVC4 Seed
 基于springMVC4构建的seed项目，提供统一的rest接口响应、异常处理、参数校验等
 
-- **基于springMVC4构建的seed项目，提供统一的Controller请求响应、参数校验、异常处理!**
-
 ******************
 
 
