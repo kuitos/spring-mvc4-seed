@@ -21,9 +21,9 @@ public class RestResultGenerator {
      * @param message 成功提示信息
      * @return ResponseResult
      */
-    public static <T> ResponseResult<T> genResult(String message) {
+    public static ResponseResult genResult(String message) {
 
-        ResponseResult<T> responseResult = ResponseResult.newInstance();
+        ResponseResult responseResult = ResponseResult.newInstance();
         responseResult.setSuccess(true);
         responseResult.setMessage(message);
 
@@ -35,7 +35,7 @@ public class RestResultGenerator {
      *
      * @param data    结果正文
      * @param message 成功提示信息
-     * @return ResponseResult
+     * @return ResponseResult<T>
      */
     public static <T> ResponseResult<T> genResult(T data, String message) {
 
@@ -55,11 +55,11 @@ public class RestResultGenerator {
      * 生成响应失败的结果
      *
      * @param message 自定义错误信息
-     * @return ResponseResult<T>
+     * @return ResponseResult
      */
-    public static <T> ResponseResult<T> genErrorResult(String message) {
+    public static ResponseResult genErrorResult(String message) {
 
-        ResponseResult<T> result = ResponseResult.newInstance();
+        ResponseResult result = ResponseResult.newInstance();
         result.setSuccess(false);
         result.setMessage(message);
 
@@ -76,9 +76,9 @@ public class RestResultGenerator {
      * @param responseErrorEnum 失败信息
      * @return ResponseResult
      */
-    public static <T> ResponseResult<T> genErrorResult(ResponseErrorEnum responseErrorEnum) {
+    public static ResponseResult genErrorResult(ResponseErrorEnum responseErrorEnum) {
 
-        ResponseResult<T> result = ResponseResult.newInstance();
+        ResponseResult result = ResponseResult.newInstance();
         result.setSuccess(false);
         result.setErrorInfo(responseErrorEnum);
 
