@@ -9,9 +9,9 @@
     +src/main/java/com.kuitos.common
         +base
             -MybatisDao.java            // 通用MybatisDao
-            -RestExceptionHandler       // 全局RestController异常处理器，使用@ControllerAdvice实现
+            -RestExceptionHandler.java  // 全局RestController异常处理器，使用@ControllerAdvice实现
         +controller
-            -DemoRestController         // demo controller
+            -DemoRestController.java    // demo controller
         +enums              
             -ResponseErrorEnum.java     // 统一响应错误信息
         +bean
