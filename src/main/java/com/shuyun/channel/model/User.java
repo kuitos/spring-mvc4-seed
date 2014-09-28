@@ -15,17 +15,17 @@ public class User {
     private String userName;
 
     @NotEmpty
-    private int age;
+    private Integer age;
 
     private User() {
     }
 
-    private User(String userName, int age) {
+    private User(String userName, Integer age) {
         this.userName = userName;
         this.age = age;
     }
 
-    public static User newInstance(String userName, int age) {
+    public static User newInstance(String userName, Integer age) {
         return new User(userName, age);
     }
 
@@ -41,7 +41,7 @@ public class User {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(Integer age) {
         this.age = age;
     }
 }
