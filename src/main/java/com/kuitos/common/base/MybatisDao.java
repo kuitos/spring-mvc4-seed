@@ -1,4 +1,4 @@
-package com.shuyun.channel.base;
+package com.kuitos.common.base;
 
 import org.apache.ibatis.mapping.BoundSql;
 import org.apache.ibatis.mapping.MappedStatement;

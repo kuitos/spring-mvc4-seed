@@ -8,6 +8,6 @@
     </settings>
     
     <typeAliases>
-     	<typeAlias type="com.shuyun.channel.model.User" alias="User" />
+     	<typeAlias type="com.kuitos.common.bean.User" alias="User" />
     </typeAliases>
 </configuration>

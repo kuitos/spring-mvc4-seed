@@ -1,7 +1,7 @@
-package com.shuyun.channel.util;
+package com.kuitos.common.util;
 
-import com.shuyun.channel.enums.ResponseErrorEnum;
-import com.shuyun.channel.model.ResponseResult;
+import com.kuitos.common.enums.ResponseErrorEnum;
+import com.kuitos.common.bean.ResponseResult;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

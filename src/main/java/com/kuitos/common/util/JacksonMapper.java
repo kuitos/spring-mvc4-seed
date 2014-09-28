@@ -1,4 +1,4 @@
-package com.shuyun.channel.util;
+package com.kuitos.common.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.*;

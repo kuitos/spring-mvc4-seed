@@ -1,7 +1,7 @@
-package com.shuyun.channel.model;
+package com.kuitos.common.bean;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
-import com.shuyun.channel.enums.ResponseErrorEnum;
+import com.kuitos.common.enums.ResponseErrorEnum;
 
 /**
  * 统一请求返回结果model

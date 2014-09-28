@@ -1,9 +1,9 @@
-package com.shuyun.channel.controller;
+package com.kuitos.common.controller;
 
-import com.shuyun.channel.model.ResponseResult;
-import com.shuyun.channel.model.User;
-import com.shuyun.channel.util.RestResultGenerator;
-import com.shuyun.channel.service.DemoService;
+import com.kuitos.common.bean.ResponseResult;
+import com.kuitos.common.bean.User;
+import com.kuitos.common.util.RestResultGenerator;
+import com.kuitos.common.service.DemoService;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

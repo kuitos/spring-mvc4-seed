@@ -1,4 +1,4 @@
-package com.shuyun.channel.model;
+package com.kuitos.common.bean;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import org.hibernate.validator.constraints.NotEmpty;
