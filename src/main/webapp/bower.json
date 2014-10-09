@@ -1,0 +1,19 @@
+{
+    "name"        : "spring-mvc4-angular-seed",
+    "version"     : "1.0.0",
+    "authors"     : [
+        "Kuitos <kuitos.lau@gmail.com>"
+    ],
+    "description" : "spring-mvc4-angular-seed",
+    "keywords"    : [
+        "spring mvc", "angular"
+    ],
+    "dependencies": {
+        "angular"         : ">=1.2.25",
+        "angular-resource": ">=1.2.25",
+        "angular-route"   : ">=1.2.25",
+        "jquery"          : "1.11.1",
+        "requirejs"       : ">=2.1.15"
+    },
+    "license"     : "MIT"
+}

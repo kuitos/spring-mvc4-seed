@@ -1,54 +1,16 @@
 <!--
- Created by kui.liu on 2014/09/25 下午8:35.
+ Created by kui.liu on 2014/10/09 上午10:23.
 -->
 <!DOCTYPE html>
-<html ng-app="OperationApp">
+<html>
 <head>
-    <title>运营管理系统</title>
-
+    <title></title>
 </head>
-<body ng-controller="IndexCtrl">
-
-userName:<input type="text" ng-model="user.userName"/>{{user}}
-age:<input type="text" ng-model="user.age"/>
-<input type="button" value="获取用户" ng-click="getUser(user.userName)"/>
-<input type="button" value="保存用户" ng-click="saveUser(user)"/>
-
-<ul>
-    <li ng-repeat="user in userList"><span ng-bind="user.userName"></span><span ng-bind="user.age"></span></li>
-</ul>
-
-<script src="http://cdn.bootcss.com/angular.js/1.2.16/angular.js"></script>
-
-<script>
-
-    angular.module("OperationApp", [])
-            .controller("IndexCtrl", ["$scope", "$http", function ($scope, $http) {
-
-                $scope.getUser = function (userName) {
-                    $http.get("/getUser", {params: {userName: userName}}).success(function (res) {
-                        console.log(res);
-                        $scope.userList = res.data;
-                    }).error(function (res) {
-                        console.log(res);
-                    });
-                };
-
-                $scope.saveUser = function (user) {
-
-                    $http.post("/saveUser", user).success(function (res) {
-                        console.log(res);
-                    }).error(function (res) {
-                        console.log(res)
-                    });
-
-                };
-
-            }]);
+<body>
 
 
-</script>
-
-
+<script src="/bower_components/angular/angular.min.js"></script>
+<script src="/bower_components/angular-route/angular-route.min.js"></script>
+<script src="/bower_components/angular-resource/angular-resource.min.js"></script>
 </body>
 </html>
